@@ -14,9 +14,6 @@ public class CovidMapper {
         return new CovidCase(
                 covidCaseDto.getId(),
                 covidCaseDto.getCountry(),
-                covidCaseDto.getCountryCode(),
-                covidCaseDto.getLat(),
-                covidCaseDto.getLon(),
                 covidCaseDto.getDate()
         );
     }
@@ -25,16 +22,13 @@ public class CovidMapper {
         return new CovidCaseDto(
                 covidCase.getId(),
                 covidCase.getCountry(),
-                covidCase.getCountryCode(),
-                covidCase.getLat(),
-                covidCase.getLon(),
                 covidCase.getDate()
         );
     }
 
     public List<CovidCaseDto> mapToCovidCaseDtoList(final List<CovidCase> cases) {
         return cases.stream()
-                .map(c -> new CovidCaseDto(c.getId(), c.getCountry(), c.getCountryCode(), c.getLat(), c.getLon(), c.getDate()))
+                .map(c -> new CovidCaseDto(c.getId(), c.getCountry(), c.getDate()))
                 .collect(Collectors.toList());
     }
 }

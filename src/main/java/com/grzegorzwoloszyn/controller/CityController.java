@@ -42,7 +42,7 @@ public class CityController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "saveCity", consumes = APPLICATION_JSON_VALUE)
-    public void createCity(@RequestBody CityDto cityDto){
+    public void createCity(@RequestBody CityDto cityDto) {
         dbCityService.saveCity(cityMapper.mapToCity(cityDto));
     }
 }

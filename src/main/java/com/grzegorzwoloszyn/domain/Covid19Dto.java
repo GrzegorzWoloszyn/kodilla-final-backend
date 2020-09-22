@@ -8,9 +8,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public class CovidCaseDto {
+public class Covid19Dto {
 
-    private Long id;
-    private String country;
-    private String date;
+    private String name;
+    private int confirmed;
+    private int deaths;
+    private int active;
+    private String data;
 }

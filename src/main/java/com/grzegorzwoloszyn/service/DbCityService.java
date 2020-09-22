@@ -27,6 +27,6 @@ public class DbCityService {
     }
 
     public void delete(final Long id) {
-       cityRepository.deleteById(id);
+        cityRepository.deleteById(id);
     }
 }

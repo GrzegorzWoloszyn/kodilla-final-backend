@@ -19,19 +19,8 @@ public class CovidCase {
     @Column(name = "country")
     private String country;
 
-    @Column(name = "countryCode")
-    private String countryCode;
-
-    @Column(name = "lat")
-    private double lat;
-
-    @Column(name = "lon")
-    private double lon;
-
     @Column(name = "date")
     private String date;
-
-
 
 
 }

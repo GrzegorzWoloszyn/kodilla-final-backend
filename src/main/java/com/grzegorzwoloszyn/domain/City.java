@@ -20,7 +20,7 @@ public class City {
     private String name;
 
     @Column(name = "new_confirmed")
-    private int newConfirmed ;
+    private int newConfirmed;
 
     @Column(name = "total_confirmed")
     private int totalConfirmed;

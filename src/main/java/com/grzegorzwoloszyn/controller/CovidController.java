@@ -41,7 +41,7 @@ public class CovidController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "saveCase", consumes = APPLICATION_JSON_VALUE)
-    public void createCase(@RequestBody CovidCaseDto covidCaseDto){
+    public void createCase(@RequestBody CovidCaseDto covidCaseDto) {
         dbCovidService.saveCovidCase(covidMapper.mapToCovidCase(covidCaseDto));
     }
 }
