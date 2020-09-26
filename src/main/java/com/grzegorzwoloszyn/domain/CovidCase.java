@@ -23,4 +23,6 @@ public class CovidCase {
     private String date;
 
 
+
+
 }

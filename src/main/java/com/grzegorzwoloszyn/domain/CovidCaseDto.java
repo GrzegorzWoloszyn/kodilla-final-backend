@@ -13,4 +13,6 @@ public class CovidCaseDto {
     private Long id;
     private String country;
     private String date;
+
+    
 }

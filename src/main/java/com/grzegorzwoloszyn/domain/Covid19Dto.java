@@ -15,4 +15,15 @@ public class Covid19Dto {
     private int deaths;
     private int active;
     private String data;
+
+
+    @Override
+    public String toString() {
+        return "Covid19Dto:" +
+                "name='" + name + '\'' +
+                ", confirmed=" + confirmed +
+                ", deaths=" + deaths +
+                ", active=" + active +
+                ", data='" + data + '\'';
+    }
 }

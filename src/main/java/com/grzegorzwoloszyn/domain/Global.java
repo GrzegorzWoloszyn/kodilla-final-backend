@@ -1,78 +1,40 @@
 
 package com.grzegorzwoloszyn.domain;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Global {
 
-    @SerializedName("NewConfirmed")
-    @Expose
+    @JsonProperty("NewConfirmed")
     private Integer newConfirmed;
-    @SerializedName("TotalConfirmed")
-    @Expose
+    @JsonProperty("TotalConfirmed")
     private Integer totalConfirmed;
-    @SerializedName("NewDeaths")
-    @Expose
+    @JsonProperty("NewDeaths")
     private Integer newDeaths;
-    @SerializedName("TotalDeaths")
-    @Expose
+    @JsonProperty("TotalDeaths")
     private Integer totalDeaths;
-    @SerializedName("NewRecovered")
-    @Expose
+    @JsonProperty("NewRecovered")
     private Integer newRecovered;
-    @SerializedName("TotalRecovered")
-    @Expose
+    @JsonProperty("TotalRecovered")
     private Integer totalRecovered;
 
-    public Integer getNewConfirmed() {
-        return newConfirmed;
+    @Override
+    public String toString() {
+        return "Global{" +
+                " newConfirmed = " + newConfirmed +
+                ", totalConfirmed = " + totalConfirmed +
+                ", newDeaths = " + newDeaths +
+                ", totalDeaths = " + totalDeaths +
+                ", newRecovered = " + newRecovered +
+                ", totalRecovered = " + totalRecovered + "}"
+                + '\n';
     }
-
-    public void setNewConfirmed(Integer newConfirmed) {
-        this.newConfirmed = newConfirmed;
-    }
-
-    public Integer getTotalConfirmed() {
-        return totalConfirmed;
-    }
-
-    public void setTotalConfirmed(Integer totalConfirmed) {
-        this.totalConfirmed = totalConfirmed;
-    }
-
-    public Integer getNewDeaths() {
-        return newDeaths;
-    }
-
-    public void setNewDeaths(Integer newDeaths) {
-        this.newDeaths = newDeaths;
-    }
-
-    public Integer getTotalDeaths() {
-        return totalDeaths;
-    }
-
-    public void setTotalDeaths(Integer totalDeaths) {
-        this.totalDeaths = totalDeaths;
-    }
-
-    public Integer getNewRecovered() {
-        return newRecovered;
-    }
-
-    public void setNewRecovered(Integer newRecovered) {
-        this.newRecovered = newRecovered;
-    }
-
-    public Integer getTotalRecovered() {
-        return totalRecovered;
-    }
-
-    public void setTotalRecovered(Integer totalRecovered) {
-        this.totalRecovered = totalRecovered;
-    }
-
 }

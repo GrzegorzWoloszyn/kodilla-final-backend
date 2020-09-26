@@ -1,133 +1,50 @@
 
 package com.grzegorzwoloszyn.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
-@Component
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Country {
 
-    @SerializedName("Country")
-    @Expose
+    @JsonProperty("Country")
     private String country;
-    @SerializedName("CountryCode")
-    @Expose
-    private String countryCode;
-    @SerializedName("Slug")
-    @Expose
-    private String slug;
-    @SerializedName("NewConfirmed")
-    @Expose
+    @JsonProperty("NewConfirmed")
     private Integer newConfirmed;
-    @SerializedName("TotalConfirmed")
-    @Expose
+    @JsonProperty("TotalConfirmed")
     private Integer totalConfirmed;
-    @SerializedName("NewDeaths")
-    @Expose
+    @JsonProperty("NewDeaths")
     private Integer newDeaths;
-    @SerializedName("TotalDeaths")
-    @Expose
+    @JsonProperty("TotalDeaths")
     private Integer totalDeaths;
-    @SerializedName("NewRecovered")
-    @Expose
+    @JsonProperty("NewRecovered")
     private Integer newRecovered;
-    @SerializedName("TotalRecovered")
-    @Expose
+    @JsonProperty("TotalRecovered")
     private Integer totalRecovered;
-    @SerializedName("Date")
-    @Expose
+    @JsonProperty("Date")
     private String date;
-    @SerializedName("Premium")
-    @Expose
-    private Premium premium;
 
-    public String getCountry() {
-        return country;
+    @Override
+    public String toString() {
+        return "Country{" +
+                "country='" + country +
+                ", newConfirmed=" + newConfirmed +
+                ", totalConfirmed=" + totalConfirmed +
+                ", newDeaths=" + newDeaths +
+                ", totalDeaths=" + totalDeaths +
+                ", newRecovered=" + newRecovered +
+                ", totalRecovered=" + totalRecovered +
+                ", date='" + date + '\n';
     }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getCountryCode() {
-        return countryCode;
-    }
-
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
-    }
-
-    public String getSlug() {
-        return slug;
-    }
-
-    public void setSlug(String slug) {
-        this.slug = slug;
-    }
-
-    public Integer getNewConfirmed() {
-        return newConfirmed;
-    }
-
-    public void setNewConfirmed(Integer newConfirmed) {
-        this.newConfirmed = newConfirmed;
-    }
-
-    public Integer getTotalConfirmed() {
-        return totalConfirmed;
-    }
-
-    public void setTotalConfirmed(Integer totalConfirmed) {
-        this.totalConfirmed = totalConfirmed;
-    }
-
-    public Integer getNewDeaths() {
-        return newDeaths;
-    }
-
-    public void setNewDeaths(Integer newDeaths) {
-        this.newDeaths = newDeaths;
-    }
-
-    public Integer getTotalDeaths() {
-        return totalDeaths;
-    }
-
-    public void setTotalDeaths(Integer totalDeaths) {
-        this.totalDeaths = totalDeaths;
-    }
-
-    public Integer getNewRecovered() {
-        return newRecovered;
-    }
-
-    public void setNewRecovered(Integer newRecovered) {
-        this.newRecovered = newRecovered;
-    }
-
-    public Integer getTotalRecovered() {
-        return totalRecovered;
-    }
-
-    public void setTotalRecovered(Integer totalRecovered) {
-        this.totalRecovered = totalRecovered;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public Premium getPremium() {
-        return premium;
-    }
-
-    public void setPremium(Premium premium) {
-        this.premium = premium;
-    }
-
 }

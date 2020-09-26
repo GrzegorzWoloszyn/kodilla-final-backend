@@ -19,5 +19,5 @@ public class CityDto {
     private int totalDeaths;
     private int newRecovered;
     private int totalRecovered;
-
+    
 }

@@ -37,4 +37,6 @@ public class City {
     @Column(name = "total_recovered")
     private int totalRecovered;
 
+
+
 }
